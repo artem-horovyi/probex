@@ -1,4 +1,4 @@
-# Ideas
+# Features
 
 This document contains ideas that may become part of Probex in the future.
 
