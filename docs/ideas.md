@@ -1,4 +1,4 @@
-# Features
+# Ideas
 
 This document contains ideas that may become part of Probex in the future.
 
@@ -15,7 +15,7 @@ They may change, be redesigned, or be discarded.
 - users must inspect runtime state manually
 - users doesen't have a GUI
 
-### Feature
+### Idea
 
 Allow users to open web UI or setup some debugging tools with CLI by running simple commands.
 
@@ -25,7 +25,7 @@ Allow users to open web UI or setup some debugging tools with CLI by running sim
 
 Modern AI assistants cannot inspect a live application's runtime state.
 
-### Feature
+### Idea
 
 Allow AI agents (Claude Code, Codex, ChatGPT, etc.) to connect to a running application through Probex and inspect runtime information using a secure API.
 
