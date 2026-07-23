@@ -11,9 +11,7 @@ They may change, be redesigned, or be discarded.
 
 ### Problem
 
-- users must do manually any actions
-- users must inspect runtime state manually
-- users doesen't have a GUI
+Users must do manually any actions, inspect runtime state manually, or do not have a GUI.
 
 ### Idea
 
