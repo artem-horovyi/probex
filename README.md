@@ -6,42 +6,34 @@ It provides a simple way to inspect running applications through a lightweight S
 
 > ⚠️ ProbeX is under active development. APIs and protocols may change before the first stable release.
 
----
-
 ## Why?
 
 Debugging issues in running applications is often slow and expensive.
 
-Developers frequently have to reproduce problems locally, add temporary logging, redeploy applications, or rely on environment-specific tooling. These workflows increase incident resolution time and make debugging more difficult.
+Developers frequently have to reproduce problems locally, add temporary logging, redeploy applications or rely on environment-specific tooling. These workflows increase incident resolution time and make debugging more difficult.
 
 ProbeX provides a consistent runtime debugging experience across environments.
-
----
 
 ## Features
 
 - Runtime inspection
 - Live data snapshots
-- Lightweight Node.js SDK
+- Lightweight SDKs
 - Headless architecture
-- CLI for interacting with running applications
+- CLI for managing and interacting with applications
 - Open connector protocol
 - Extensible client architecture
 
----
-
-## Architecture
+## High level architecture
 
 ```mermaid
-graph LR
-    A[Application]
-    B[Node.js SDK]
-    C[Connector]
-    D[CLI]
+graph TD
+    A(Application)
+    B(SDK)
+    C(Connector)
+    D(Client CLI, UI, etc.)
 
-    A --> B
-    B --> C
-    C --> D
+    A --> B --> C --> D
 ```
 
 The SDK exposes runtime information from a running application.
@@ -52,57 +44,37 @@ The CLI is the first client implementation built on top of the connector protoco
 
 The connector protocol is open, allowing custom clients and integrations to be implemented independently.
 
----
-
 ## Components
 
-### Node.js SDK
+#### SDK
 
 A lightweight SDK that integrates with your application and exposes runtime debugging capabilities.
 
-### Connector
+#### Connector
 
 A transport layer that bridges the runtime and external clients.
 
-### CLI
+#### CLI
 
-A command-line interface for interacting with running applications.
-
----
+A command-line interface for setup, manage and interact with applications.
 
 ## Installation
 
-### Server
+#### Server
 
 > Documentation coming soon.
 
-### CLI
+#### CLI
 
 > Documentation coming soon.
-
----
 
 ## Development
 
-Instructions for setting up the repository locally will be added soon.
-
----
-
-## Roadmap
-
-Current focus:
-
-- Node.js SDK
-- Connector
-- CLI
-
----
+> Instructions for setting up the repository locally will be added soon.
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome.
-
----
 
 ## License
 
