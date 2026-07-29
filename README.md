@@ -46,7 +46,7 @@ The connector protocol is open, allowing custom clients and integrations to be i
 
 ## Components
 
-#### SDK
+### SDK
 
 A lightweight SDK that integrates with your application and exposes runtime debugging capabilities.
 
