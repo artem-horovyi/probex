@@ -50,21 +50,21 @@ The connector protocol is open, allowing custom clients and integrations to be i
 
 A lightweight SDK that integrates with your application and exposes runtime debugging capabilities.
 
-#### Connector
+### Connector
 
 A transport layer that bridges the runtime and external clients.
 
-#### CLI
+### CLI
 
 A command-line interface for setup, manage and interact with applications.
 
 ## Installation
 
-#### Server
+### Server
 
 > Documentation coming soon.
 
-#### CLI
+### CLI
 
 > Documentation coming soon.
 
