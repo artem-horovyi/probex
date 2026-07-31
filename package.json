@@ -1,0 +1,11 @@
+{
+  "name": "probex",
+  "version": "1.0.0",
+  "description": "ProbeX Debugger Platform",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Artem Horovyi",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2"
+}
