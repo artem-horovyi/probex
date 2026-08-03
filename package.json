@@ -4,12 +4,19 @@
   "private": true,
   "description": "Open-source Runtime Debugger",
   "scripts": {
+    "dev:basic": "pnpm --filter @probex/basic dev",
+    "build": "pnpm -r build"
   },
   "keywords": [],
   "author": "Artem Horovyi",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.26.2",
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "tsx": "^4.23.5",
+    "typescript": "^7.0.2"
   }
 }
