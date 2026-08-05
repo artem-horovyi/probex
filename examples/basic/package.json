@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
-    "build": "tsc --noEmit && esbuild src/index.ts --outfile=dist/index.js"
+    "build": "rm -rf ./dist && tsc --noEmit && esbuild src/index.ts --outdir=dist --platform=node --format=esm --sourcemap --target=node22 --bundle"
   },
   "keywords": [],
   "author": "Artem Horovyi",

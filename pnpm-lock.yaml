@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@types/node':
+        specifier: ^26.1.2
+        version: 26.1.2
       esbuild:
         specifier: ^0.28.1
         version: 0.28.1
@@ -17,6 +20,12 @@ importers:
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
+
+  examples/basic:
+    dependencies:
+      fastify:
+        specifier: ^5.11.2
+        version: 5.11.2
 
   examples/node-basic:
     dependencies:
@@ -210,6 +219,9 @@ packages:
 
   '@pinojs/redact@0.4.0':
     resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
+
+  '@types/node@26.1.2':
+    resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     resolution: {integrity: sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==}
@@ -500,6 +512,9 @@ packages:
     engines: {node: '>=16.20.0'}
     hasBin: true
 
+  undici-types@8.3.0:
+    resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.28.1':
@@ -604,6 +619,10 @@ snapshots:
       ipaddr.js: 2.4.0
 
   '@pinojs/redact@0.4.0': {}
+
+  '@types/node@26.1.2':
+    dependencies:
+      undici-types: 8.3.0
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
@@ -876,3 +895,5 @@ snapshots:
       '@typescript/typescript-sunos-x64': 7.0.2
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
+
+  undici-types@8.3.0: {}
