@@ -5,7 +5,7 @@
   "description": "Open-source Runtime Debugger",
   "type": "module",
   "scripts": {
-    "dev": "pnpm run -r dev",
+    "dev": "pnpm run -r --parallel dev",
     "build": "pnpm run -r build"
   },
   "keywords": [],
