@@ -24,12 +24,6 @@ importers:
         specifier: ^5.11.2
         version: 5.11.2
 
-  examples/node-basic:
-    dependencies:
-      fastify:
-        specifier: ^5.11.2
-        version: 5.11.2
-
   packages/cli: {}
 
   packages/codemods: {}
@@ -407,8 +401,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  ipaddr.js@2.4.0:
-    resolution: {integrity: sha512-9VGk3HGanVE6JoZXHiCpnGy5X0jYDnN4EA4lntFPj+1vIWlFhIylq2CrrCOJH9EAhc5CYhq18F2Av2tgoAPsYQ==}
+  ipaddr.js@2.5.0:
+    resolution: {integrity: sha512-aq+t5NAc+cS6rZQQVWC2x98CPqGtKKTMDd4Gaodv0wShnItdKg/51djkGJ1hqH+Oy0ivDftCbSLCQob8zso01w==}
     engines: {node: '>= 10'}
 
   json-schema-ref-resolver@3.0.0:
@@ -613,7 +607,7 @@ snapshots:
   '@fastify/proxy-addr@5.1.0':
     dependencies:
       '@fastify/forwarded': 3.0.2
-      ipaddr.js: 2.4.0
+      ipaddr.js: 2.5.0
 
   '@pinojs/redact@0.4.0': {}
 
@@ -786,7 +780,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  ipaddr.js@2.4.0: {}
+  ipaddr.js@2.5.0: {}
 
   json-schema-ref-resolver@3.0.0:
     dependencies:

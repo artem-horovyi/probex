@@ -5,6 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "tsx --watch src/index.ts",
+    "clear": "rm -rf dist",
+    "build": "pnpm clear && tsc"
   },
   "keywords": [],
   "author": "Artem Horovyi",
