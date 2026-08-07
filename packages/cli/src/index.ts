@@ -1,1 +1,1 @@
-console.log("CLI Runtime")
+console.log("CLI Runtime");

@@ -1,1 +1,1 @@
-console.log("Codemods Runtime")
+console.log("Codemods Runtime");
