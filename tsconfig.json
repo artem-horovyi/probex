@@ -1,0 +1,9 @@
+{
+  "references": [
+    { "path": "./packages/sdk" },
+    { "path": "./packages/connector" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/codemods" },
+    { "path": "./examples/basic" }
+  ]
+}
