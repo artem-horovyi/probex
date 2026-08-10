@@ -1,1 +1,1 @@
-console.log("Connector Runtime")
+console.log("Connector Runtime");

@@ -4,6 +4,6 @@
     { "path": "./packages/connector" },
     { "path": "./packages/cli" },
     { "path": "./packages/codemods" },
-    { "path": "./examples/basic" }
+    { "path": "./examples/node-basic" }
   ]
 }

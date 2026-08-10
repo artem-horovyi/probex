@@ -1,5 +1,5 @@
 {
-  "name": "@probex/basic",
+  "name": "@probex/node-basic",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -7,8 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
-    "clear": "rm -rf ./dist",
-    "build": "pnpm clear && tsc"
+    "clear": "rm -rf ./dist"
   },
   "keywords": [],
   "author": "Artem Horovyi",

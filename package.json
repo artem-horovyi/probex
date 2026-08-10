@@ -5,8 +5,15 @@
   "description": "Open-source Runtime Debugger",
   "type": "module",
   "scripts": {
-    "dev": "pnpm run -r --parallel dev",
-    "build": "pnpm run -r build"
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r clear && tsc -b",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "verify": "pnpm lint && pnpm format:check && pnpm typecheck",
+    "verify:fix": "pnpm lint:fix && pnpm format"
   },
   "keywords": [],
   "author": "Artem Horovyi",
@@ -16,8 +23,13 @@
     "node": ">=22"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.1.2",
+    "eslint": "^10.8.0",
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.9.6",
     "tsx": "^4.23.5",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.66.0"
   }
 }
