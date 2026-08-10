@@ -8,7 +8,11 @@
     "dev": "pnpm run -r --parallel dev",
     "build": "pnpm run -r build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "verify": "pnpm run lint && pnpm run format:check",
+    "verify:fix": "pnpm run lint:fix && pnpm run format:check"
   },
   "keywords": [],
   "author": "Artem Horovyi",

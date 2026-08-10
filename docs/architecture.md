@@ -41,6 +41,7 @@ CLI is the command-line interface that allows the user to interact with the debu
 Custom Interface is the user managed interface that allows the user to interact with the debugger.
 
 Possible interfaces:
+
 - Custom CLI
 - Web UI
 - Prostman or similar
@@ -104,7 +105,7 @@ graph LR
 
 ## Flows
 
-`Interface`: this is  CLI or custom interface.
+`Interface`: this is CLI or custom interface.
 
 ### Setup
 

@@ -9,12 +9,7 @@ export default [
 
   // basic
   {
-    ignores: [
-      "../dist/**",
-      "**/node_modules/**",
-      "**/*.d.ts",
-      "**/*.js"
-    ]
+    ignores: ["../dist/**", "**/node_modules/**", "**/*.d.ts", "**/*.js"],
   },
 
   {
@@ -46,6 +41,6 @@ export default [
           },
         },
       ],
-    }
+    },
   },
 ];
