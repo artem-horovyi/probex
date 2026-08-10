@@ -28,20 +28,6 @@ export default [
       import: importPlugin,
     },
     rules: {
-      // Always use double quotes.
-      quotes: ["error", "double"],
-
-      // Always require semicolons.
-      semi: ["error", "always"],
-
-      // Maximum line length.
-      "max-len": [
-        "error",
-        {
-          code: 120,
-        },
-      ],
-
       // Imports settings
       "import/no-duplicates": "error",
       "import/order": [
