@@ -14,6 +14,21 @@ Developers frequently have to reproduce problems locally, add temporary logging,
 
 ProbeX provides a consistent runtime debugging experience across environments.
 
+## Fast Run
+
+```bash
+# Run project in development mode
+pnpm install
+pnpm dev
+
+# Before commit, build the project
+pnpm verify # eslint / prettier / ts
+pnpm build # "remove ./dist's for childrens and run builds"
+
+# If you need fix formatting
+pnpm verify:fix # eslint / prettier
+```
+
 ## Features
 
 - Runtime inspection
