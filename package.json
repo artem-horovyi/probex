@@ -5,14 +5,15 @@
   "description": "Open-source Runtime Debugger",
   "type": "module",
   "scripts": {
-    "dev": "pnpm run -r --parallel dev",
-    "build": "pnpm run -r build",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r clear && tsc -b",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "verify": "pnpm run lint && pnpm run format:check",
-    "verify:fix": "pnpm run lint:fix && pnpm run format:check"
+    "verify": "pnpm lint && pnpm format:check && pnpm typecheck",
+    "verify:fix": "pnpm lint:fix && pnpm format"
   },
   "keywords": [],
   "author": "Artem Horovyi",
