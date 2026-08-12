@@ -7,14 +7,14 @@
   "scripts": {
     "dev": "pnpm -r --parallel dev",
     "build": "pnpm -r build",
-    "typecheck": "tsc -b --noEmit",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "verify": "pnpm lint && pnpm format:check && pnpm typecheck",
+    "verify": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test",
     "verify:fix": "pnpm lint:fix && pnpm format"
   },
   "keywords": [],
