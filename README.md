@@ -23,7 +23,7 @@ pnpm dev
 
 # Before commit, build the project
 pnpm verify # eslint / prettier / ts
-pnpm build # "remove ./dist's for childrens and run builds"
+pnpm build # "removing ./dist's for childrens and run builds"
 
 # If you need fix formatting
 pnpm verify:fix # eslint / prettier
