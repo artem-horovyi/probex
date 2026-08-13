@@ -13,9 +13,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "verify": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test",
-    "verify:fix": "pnpm lint:fix && pnpm format"
+    "format:check": "prettier . --check"
   },
   "keywords": [],
   "author": "Artem Horovyi",
