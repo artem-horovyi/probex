@@ -23,20 +23,8 @@ jobs:
         with:
           version: 10.26.2
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Verify project
+        run: pnpm verify
 
-      - name: Linter
-        run: pnpm lint
-
-      - name: Formatter
-        run: pnpm format:check
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Tests
-        run: pnpm test
-
-      - name: Build
+      - name: Build project
         run: pnpm build

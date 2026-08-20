@@ -1,2 +1,2 @@
 console.log("Index TS Runtime");
-console.log("123");
+console.log("123")
