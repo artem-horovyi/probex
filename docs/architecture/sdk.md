@@ -26,7 +26,7 @@ Components of SDK:
 
 ### Debugger
 
-The main orchestrator of the SDK. It manages the debugger lifecycle, coordinates breakpoint handling, processes runtime events, and routes commands and events through the Connector interface.
+The main orchestrator of the SDK. It manages the debugger lifecycle, coordinates breakpoint handling, processes runtime events, routes commands through the SDK command router, and sends events through the Connector interface.
 
 ### Breakpoint
 
@@ -52,9 +52,30 @@ A file contains its name and resolved location.
 
 ### Command
 
-A command is an object received from the Connector and handled by the SDK.
+A command is an object received through the Connector's `onCommand` listener and handled by the SDK.
 
 It contains a command type, such as `breakpoint.add` or `breakpoint.remove`, and the data required to execute the command.
+
+#### Command format
+
+```json
+{
+  "type": "breakpoint.add",
+  "data": { ... }
+}
+```
+
+#### Handling of commands
+
+The Connector invokes the `onCommand` listener when a command is received.
+
+The SDK routes the command by its type to the appropriate handler.
+
+#### Unknown commands
+
+Unknown commands are ignored by the SDK and reported as warnings.
+
+Repeated unknown commands are suppressed to prevent excessive logging.
 
 ### Event
 
@@ -65,9 +86,9 @@ It contains an event type and the data associated with the event.
 ## 4. Data Flow
 
 - Initialization
-- Connector -> Command -> SDK
-- V8 Event -> Snapshot -> Event -> Connector
-- Error -> Connector
+- Connector → Command → SDK Router → Handler
+- V8 Event → Snapshot → Event → Connector
+- Error → Connector
 - No active breakpoints → Idle mode
 - Idle → Add breakpoint → Active debugging
 
