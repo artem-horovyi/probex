@@ -23,10 +23,34 @@ Components of SDK:
 - File
 - Command
 - Event
+- Error
+
+```mermaid
+NOT DEFINED
+```
 
 ### Debugger
 
 The main orchestrator of the SDK. It manages the debugger lifecycle, coordinates breakpoint handling, processes runtime events, routes commands through the SDK command router, and sends events through the Connector interface.
+
+#### Configration !!! CONFIG TYPE NOT DEFINED !!!
+
+```ts
+
+interface Config {
+
+}
+
+import debugger from '@probex/sdk';
+
+debugger.configure(config);
+```
+
+Using `start()` before `configure()` will throw an error.
+
+Using `configure()` multiple times will keep first config and print warning to the console.
+
+Using `start()` multiple times will throw an error.
 
 ### Breakpoint
 
@@ -34,15 +58,89 @@ The primary debugging entity representing a location in the application where Pr
 
 A breakpoint contains a file, line, optional conditions, and an internal identifier once created.
 
+#### Format
+
+```ts
+interface Breakpoint {
+  file: string; // path to the file
+  line: number;
+  conditions?: string;
+  id: string; // only for already existing breakpints
+}
+```
+
+#### Conditions !!! NOT DEFINED !!!
+
+This is custom conditions language that allows to define conditional breakpoints and hit it only by successful condition evaluation.
+
+```
+req.body.title==="test condition"
+```
+
 ### Variable
 
 Represents the runtime value of a variable captured during snapshot collection.
+
+#### Supported Data Types
+
+- `string`
+- `number`
+- `boolean`
+- `object`
+- `array`
+- `null`
+- `undefined`
+
+#### Variable Format
+
+Variables are represented as objects with the following properties:
+
+```ts
+interface Variable {
+  name: string; // name of the variable
+  value:
+    PrimitiveValue | // for simple values
+    Variable[];// used for nested object and array values
+  type: "string" | "number" | etc.;
+}
+```
+
+#### Circular references !!! NOT DEFINED IN DATA TYPE !!!
+
+Circular references are detected by the SDK and represented in the snapshot.
+
+The SDK tracks variables in the current traversal path to detect circular references.
+Depth limitations are used as an additional protection against excessively large snapshots.
+
+#### Limitations
+
+- Circular references identifiing and representing in the `Variable` object.
+- Depth limitations must control the depth of the snapshot to avoid large snapshots.
 
 ### Snapshot
 
 Represents the runtime state captured when a breakpoint event occurs.
 
 A snapshot contains breakpoint information and collected runtime variables.
+
+#### Scopes
+
+This is default scopes that used in popular debuggers like VSCode and others.
+
+- `local`: Variables local to the current function.
+- `global`: Variables global to the current module.
+- `closure`: Variables from the closure scope.
+
+#### Format
+
+```ts
+interface Snapshot {
+  breakpoint: Breakpoint;
+  local: Variable[];
+  global: Variable[];
+  closure: Variable[];
+}
+```
 
 ### File
 
@@ -83,6 +181,8 @@ An event is an object emitted by the SDK when a relevant runtime or debugger eve
 
 It contains an event type and the data associated with the event.
 
+### Error !!! NOT DEFINED !!!
+
 ## 4. Data Flow
 
 - Initialization
@@ -99,18 +199,11 @@ The SDK keeps runtime state in memory:
 - Active and paused breakpoints
 - Loaded files
 
-## 6. Public API
-
-Minimal SDK API:
+## 6. Public API !!! NOT DEFINED !!!
 
 ```ts
 import debugger from "@probex/sdk";
-import connector from "@probex/connector";
 
-debugger.configure({
-  connector, // or a custom connector
-  // ...
-});
-
+debugger.configure(config);
 debugger.start();
 ```
